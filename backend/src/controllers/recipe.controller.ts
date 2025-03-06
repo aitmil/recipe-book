@@ -6,7 +6,15 @@ import { IRecipe, IRecipeController, IRecipeService } from '../interfaces';
 import { SuccessHandler } from '../handlers';
 import { Logger } from '../libs';
 import { ApiError } from '../errors';
-import { INTERNAL_SERVER_ERROR } from '../constants';
+import {
+    GET_RECIPE_ERROR_MESSAGE,
+    GET_RECIPE_METHOD,
+    GET_RECIPES_ERROR_MESSAGE,
+    GET_RECIPES_METHOD,
+    INTERNAL_SERVER_ERROR,
+    LOGGER_INFO_GET_RECIPE_MESSAGE,
+    LOGGER_INFO_GET_RECIPES_MESSAGE,
+} from '../constants';
 
 export class RecipeController implements IRecipeController {
     constructor(
@@ -45,17 +53,15 @@ export class RecipeController implements IRecipeController {
             }
 
             SuccessHandler.ok(res, { data: recipes });
-            this.logger.info('LOGGER_INFO_GET_RECIPES_MESSAGE');
+            this.logger.info(LOGGER_INFO_GET_RECIPES_MESSAGE);
         } catch (err) {
             if (err instanceof ApiError) {
                 return next(err);
             }
             const error = new ApiError(
                 INTERNAL_SERVER_ERROR,
-                err instanceof Error
-                    ? err.message
-                    : 'GET_RECIPES_ERROR_MESSAGE',
-                'GET_RECIPES_METHOD',
+                err instanceof Error ? err.message : GET_RECIPES_ERROR_MESSAGE,
+                GET_RECIPES_METHOD,
                 status.INTERNAL_SERVER_ERROR,
             );
             next(error);
@@ -73,15 +79,15 @@ export class RecipeController implements IRecipeController {
             const recipe = await this.recipeService.getRecipeDetailsById(id);
 
             SuccessHandler.ok(res, { data: recipe });
-            this.logger.info('LOGGER_INFO_GET_RECIPE_MESSAGE');
+            this.logger.info(LOGGER_INFO_GET_RECIPE_MESSAGE);
         } catch (err) {
             if (err instanceof ApiError) {
                 return next(err);
             }
             const error = new ApiError(
                 INTERNAL_SERVER_ERROR,
-                err instanceof Error ? err.message : 'GET_RECIPE_ERROR_MESSAGE',
-                'GET_RECIPE_METHOD',
+                err instanceof Error ? err.message : GET_RECIPE_ERROR_MESSAGE,
+                GET_RECIPE_METHOD,
                 status.INTERNAL_SERVER_ERROR,
             );
             next(error);
