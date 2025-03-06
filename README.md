@@ -97,8 +97,8 @@ The frontend will automatically connect to the backend API.
 
 ### 4. Access the Application
 
--Frontend: [http://localhost:3000](http://localhost:3000)
--Backend: [http://localhost:5000](http://localhost:5000)
+- Frontend: [http://localhost:3000](http://localhost:3000)
+- Backend: [http://localhost:5000](http://localhost:5000)
 
 ---
 
