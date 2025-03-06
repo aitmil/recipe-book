@@ -1,7 +1,7 @@
 import express, { Application } from 'express';
 import cors from 'cors';
 
-import { config } from './config/config';
+import { config } from './config';
 import { routes } from './routes';
 import { ErrorHandler } from './errors';
 import { Logger } from './libs';
