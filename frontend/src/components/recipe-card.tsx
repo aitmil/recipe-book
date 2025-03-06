@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function RecipeCard({ recipe }: { recipe: IRecipe }) {
   return (
-    <li className="mb-4 pb-1 md:pb-2 sm:mb-0 border border-gray-200 rounded-[10px] md:rounded-[20px] shadow-md hover:scale-[98%] transition-transform duration-300">
+    <li className="mb-4 pb-1 md:pb-2 md:mb-0 border border-gray-200 rounded-[10px] md:rounded-[20px] shadow-md hover:scale-[98%] transition-transform duration-300">
       <Link href="recipes/[id]" as={`/recipes/${recipe.idMeal}`}>
         <Image
           src={recipe.strMealThumb}
