@@ -2,6 +2,9 @@
     "name": "recipe-book-backend",
     "version": "1.0.0",
     "main": "dist/index.js",
+    "engines": {
+        "node": "20.x"
+    },
     "scripts": {
         "build": "tsc",
         "start": "node dist/index.js",
@@ -14,9 +17,6 @@
     },
     "author": "Anna Taranchuk",
     "license": "MIT",
-    "engines": {
-        "node": "20.x"
-    },
     "dependencies": {
         "axios": "^1.8.1",
         "cors": "^2.8.5",
