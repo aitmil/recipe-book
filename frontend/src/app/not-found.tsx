@@ -11,7 +11,7 @@ export default function NotFound() {
         <div className="flex gap-2 text-2xl font-medium text-orange-dark">
           <p>Back to </p>
           <Link href="/" className="underline">
-            home
+            recipes
           </Link>
         </div>
       </div>
