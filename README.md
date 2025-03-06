@@ -33,8 +33,8 @@ This is a full-stack **Recipe Book** application that allows users to browse rec
 
 ## Project Structure
 
-- `frontend/` - React (Next.js) application that serves the user interface.
-- `backend/` - Node.js/Express application that handles API requests.
+- `frontend` - React (Next.js) application that serves the user interface.
+- `backend` - Node.js/Express application that handles API requests.
 
 The frontend communicates with the backend API to display and manage recipes.
 
@@ -47,7 +47,7 @@ Follow these steps to set up the project locally:
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/aitmil/recipe-book>
 cd recipe-book
 ```
 
@@ -60,21 +60,21 @@ cd backend
 npm install
 ```
 
-Create a `.env` file in the `backend/` directory with the following environment variables:
+Create a `.env` file in the `backend` directory with the following environment variables:
 
 ```env
 PORT=5000
 BASE_API_URL=https://www.themealdb.com/api/json/v1/1
 ```
 
-Next, navigate to the `frontend/` directory and install its dependencies:
+Next, navigate to the `frontend` directory and install its dependencies:
 
 ```env
 cd ../frontend
 npm install
 ```
 
-Create a `.env` file in the `frontend/` directory with the following environment variables:
+Create a `.env` file in the `frontend` directory with the following environment variables:
 
 ```env
 NEXT_PUBLIC_PROJECT_TOKEN=http://localhost:5000
@@ -82,7 +82,7 @@ NEXT_PUBLIC_PROJECT_TOKEN=http://localhost:5000
 
 ### 3. Run the Application
 
-Go back to the root of the `recipe-book/` directory and start both the backend and frontend concurrently:
+Go back to the root of the `recipe-book` directory and start both the backend and frontend concurrently:
 
 ```env
 cd ..
@@ -91,14 +91,14 @@ npm start
 
 This command will:
 
-Start the backend server on port **5000**
-Start the frontend server on port **3000**
+Start the backend server on port **5000**.
+Start the frontend server on port **3000**.
 The frontend will automatically connect to the backend API.
 
 ### 4. Access the Application
 
-Frontend: [http://localhost:3000](http://localhost:3000)
-Backend: [http://localhost:5000](http://localhost:5000)
+-Frontend: [http://localhost:3000](http://localhost:3000)
+-Backend: [http://localhost:5000](http://localhost:5000)
 
 ---
 
